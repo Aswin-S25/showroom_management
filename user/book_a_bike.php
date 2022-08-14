@@ -66,7 +66,7 @@
                     </td>
                 </tr>
                 <?php
-                    $sql1 = "SELECT modelname FROM tbl_stock";
+                    $sql1 = "SELECT modelname FROM tbl_stock WHERE stock_no > 0";
                     $res1 = mysqli_query($conn, $sql1);
                     $count1 = mysqli_num_rows($res1);
                 ?>
