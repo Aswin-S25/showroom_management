@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>admin login</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<script>
+  function check()
+  {
+    var un = document.forms["adminlogin"]["uname"].value;
+    var pw = document.forms["adminlogin"]["pass"].value;
+   // alert("username="+username.value+"Password="+password.value);
+    if(un=="admin" && pw=="1234")
+    {
+      window.location.href="adactivities.php";
+    }
+    else
+    {
+      alert("Incorrect username or password, Try again!");
+    }
+  }
+</script>
+<body>
+  <!-- partial:index.partial.html -->
+  <div id="bg"></div>
+
+  <form name="adminlogin" method="post">
+    <div class="-field">
+      <input type="text" name="uname" class="inputText" placeholder="Username" required />
+    </div>
+
+    <div class="-field">
+      <input type="password" name="pass" class="inputText" placeholder="Password" required/>
+    </div>
+    <a href="#" class="link">Forgot Your Password?</a>
+    <div class="-field">
+    </div>
+      <!-- <button class="btn" type="submit" onclick="check()">Log in</button> -->
+    <input type="button" class="btn" name="log" id="logButton" value="Login" onclick="check()">
+  </form>
+  <!-- partial -->
+
+</body>
+
+</html>
