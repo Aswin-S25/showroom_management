@@ -87,18 +87,7 @@
         ?>
       </table>
 
-      <?php
-        $sql3 = "SELECT * FROM tbl_stock";
-        $res3 = mysqli_query($conn, $res3);
-        $count3 = mysqli_num_rows($res3);
-        if($count3 > 0)
-        {
-            while($row3 = mysqli_fetch_assoc($res3))
-            {
-              
-            }
-        }
-      ?>
-      
+
+     
 </body>
 </html>
