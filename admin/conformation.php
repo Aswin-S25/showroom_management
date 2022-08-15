@@ -66,7 +66,7 @@
 <body>
     <div class="center">
         <h1><u>BOOKING CONFORMATION</u></h1>
-        <button style="float:right;"><a style="text-decoration:none;" href="../adactivities.php">Go Back</a></button>
+        <button style="float:right;"><a style="text-decoration:none;" href="../admin/status_check.php">Go Back</a></button>
         <form action="" method="POST" enctype="multipart/form-data">
 
             <table class="tbl-40" >

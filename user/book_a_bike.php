@@ -120,6 +120,7 @@
         if(isset($_POST['submit']))
         {
             $cusname = $_POST['cusname'];
+            $booktime = date("Y-m-d h:i:sa");
             $mobile = $_POST['mobile'];
             $address = $_POST['address'];
             $model = $_POST['model'];
@@ -127,6 +128,7 @@
 
             $sql = "INSERT INTO tbl_book SET
             cusname = '$cusname',
+            booktime = '$booktime',
             mobile = '$mobile',
             address = '$address',
             modelname = '$model',

@@ -39,7 +39,8 @@
     <button style="float:right;"><a style="text-decoration:none;" href="../adactivities.php">Go Back</a></button>
     <table style="width: 100%;">
         <tr>
-          <th scope="col">id</th>
+          <th scope="col">Time</th>
+          <th scope="col">Id</th>
           <th scope="col">CusName</th>
           <th scope="col">Mobile No</th>
           <th scope="col">Model Name</th>
@@ -57,33 +58,35 @@
           {
             $id = $row['id'];
             $cusname = $row['cusname'];
+            $booktime = $row['booktime'];
             $mobile = $row['mobile'];
             $model = $row['modelname'];
             $conform = $row['conformation'];
           
           ?>
           <tr>
-          <td><?php echo $sn++;?></td>
-          <td><?php echo $cusname;?></td>
-          <td><?php echo $mobile;?></td>
-          <td><?php echo $model;?></td>
-          <td>
-            <?php
-              if($conform == "PENDING")
-              {
-                echo"<label style = 'color:blue'>$conform</label>";
-              }
-              elseif($conform == "CANCELED")
-              {
-                echo"<label style = 'color:red'>$conform</label>";
-              }
-              elseif($conform == "APPROVED")
-              {
-                echo"<label style = 'color:green'>$conform</label>";
-              }
-             ?>
-          </td>
-          <td><button style="background-color: rgb(142, 241, 142);"><a style="text-decoration: none;" href="conformation.php?id=<?php echo $id; ?>">Update</a></button></td>
+            <td><?php echo $booktime; ?></td>
+            <td><?php echo $sn++;?></td>
+            <td><?php echo $cusname;?></td>
+            <td><?php echo $mobile;?></td>
+            <td><?php echo $model;?></td>
+            <td>
+              <?php
+                if($conform == "PENDING")
+                {
+                  echo"<label style = 'color:blue'>$conform</label>";
+                }
+                elseif($conform == "CANCELED")
+                {
+                  echo"<label style = 'color:red'>$conform</label>";
+                }
+                elseif($conform == "APPROVED")
+                {
+                  echo"<label style = 'color:green'>$conform</label>";
+                }
+              ?>
+            </td>
+            <td><button style="background-color: rgb(142, 241, 142);"><a style="text-decoration: none;" href="conformation.php?id=<?php echo $id; ?>">Update</a></button></td>
         </tr>
         <?php
         }
