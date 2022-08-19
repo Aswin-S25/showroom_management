@@ -38,6 +38,8 @@
           <th scope="col">Mobile No</th>
           <th scope="col">Model Name</th>
           <th scope="col">Conformation</th>
+          <th scope="col">Delivery Date</th>
+
         </tr>
         <?php 
         $sql = "SELECT * FROM tbl_book ORDER BY id DESC";
@@ -54,6 +56,7 @@
             $mobile = $row['mobile'];
             $model = $row['modelname'];
             $conform = $row['conformation'];
+            $ddate = $row['delivery_date'];
           
           ?>
           <tr>
@@ -78,6 +81,7 @@
               }
              ?>
           </td>
+          <td><?php echo $ddate;?></td>
         </tr>
         <?php
         }

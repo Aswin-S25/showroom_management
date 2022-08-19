@@ -103,6 +103,12 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Delivery Date:</td>
+                    <td>
+                        <input type="date" name="ddate">
+                    </td>
+                </tr>
+                <tr>
                     <td colspan="2">
                         <input type="submit" name="submit" value="SUBMIT" class="btn-secondary">
                     </td>
@@ -119,13 +125,15 @@
             $cusname = $_POST['cusname'];
             $mobile = $_POST['mobile'];
             $model = $_POST['model'];
-            echo $conform = $_POST['confirm'];
+            $conform = $_POST['confirm'];
+            $d_date = $_POST['ddate'];
 
             $sql2 = "UPDATE tbl_book SET
             cusname = '$cusname',
             mobile = '$mobile',
             modelname = '$model',
-            conformation = '$conform'
+            conformation = '$conform',
+            delivery_date = '$d_date'
             WHERE id=$id
             ";
 

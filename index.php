@@ -467,7 +467,7 @@
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
-              <input type="text" class="form-control" name="mobileno" id="mobile no" placeholder="mobile no" data-rule="minlen:4" data-msg="Please enter at least 10 digits">
+              <input type="text" class="form-control" name="mobileno" id="mobile no" placeholder="mobile no" data-rule="minlen:4" data-msg="Please enter at least 10 digits" maxlength="10">
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
